@@ -1,0 +1,7 @@
+*{
+  margin: 0;
+}
+.App{
+  margin: auto auto;
+  max-width: 1500px;
+}
