@@ -49,6 +49,11 @@ console.log(button);
                              Create Profile
                           </Link>
                       </li>
+                       <li className ='nav-item'>
+                          <Link to ='/allprofiles' className ='nav-links' onClick={closeMobileMenu}>
+                             All Profiles
+                          </Link>
+                      </li>
                       {/* <li className ='nav-item'>
                           <Link to ='/createprofile' className ='nav-links' onClick={closeMobileMenu}>
                              Create Profile

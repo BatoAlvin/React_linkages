@@ -18,6 +18,7 @@ import Profile from "./pages/Profile/Profile";
 import Footer from "./components/Footer/Footer";
 import './App.css';
 import Jobid from "./pages/Jobid/Jobid";
+import Updates from "./pages/Profile/Updates";
 
 function App() {
   return (
@@ -35,8 +36,9 @@ function App() {
          <Route path="/jobs/:id" element={<Jobid/>}/>
          <Route path="/proof" element={<Proof/>}/>
          <Route path="/profile/:id" element={<Profileid/>}/>
+         <Route path="/updates/:id" element={<Updates/>}/>
          <Route path="/allprofiles" element={<Allprofiles/>}/>
-         {/* <Route path="/update/:id" element={<Update/>}/> */}
+       
       </Routes>
       <Footer/>
     </div>
