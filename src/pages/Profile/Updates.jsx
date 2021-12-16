@@ -16,7 +16,7 @@ export default function Updates({info}) {
   const handleSubmit = async (e) => {
     e.preventDefault()
     console.log(id)
-    const result = await updateDocument("prof", data, id)
+    const result = await updateDocument("profiles", data, id)
     .then((result)=>{
       setShowAlert(true)
     })
