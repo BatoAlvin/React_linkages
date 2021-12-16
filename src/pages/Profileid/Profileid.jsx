@@ -10,7 +10,7 @@ function Profileid() {
 
 
   const fetchdata = async () => {
-    const job = await fetchOne("prof", id);
+    const job = await fetchOne("profiles", id);
     setData((PrevData) => ({ ...PrevData, ...job }));
   };
 
@@ -21,9 +21,9 @@ function Profileid() {
     <>
       {data && (
       <div>
-          <h1>{data.firstName}</h1>
-          <p>{data.lastName}</p>
-          <p>{data.job}</p>
+          <h1>{data.userName}</h1>
+          <p>{data.title}</p>
+          <p>{data.phoneNumber}</p>
          
                <Link to={`/updates/${id}`}>
         <button>Update</button>

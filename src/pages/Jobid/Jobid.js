@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchOne } from "../../utils/fetch";
+import {Link} from 'react-router-dom';
 
 function Jobid() {
   const { id } = useParams();
@@ -24,6 +25,9 @@ function Jobid() {
           <p>{data.qualifications}</p>
           <p>{data.location}</p>
           <p>{data.deadline}</p>
+            <Link to ='/jobapplication'>
+                            Apply
+                          </Link>
         </>
       )}
     </div>

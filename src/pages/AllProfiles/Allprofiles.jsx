@@ -41,7 +41,7 @@ function Allprofiles() {
   
 
   const fetchdata = async () => {
-    const jobs = await fetchAll("prof");
+    const jobs = await fetchAll("profiles");
     setTodos(jobs);
   };
 
@@ -69,9 +69,9 @@ function Allprofiles() {
             {todos.map((info) => (
                 <Grid item xs={12} sm={6} md={4} key={info.id}>
                   <OppCards
-                    job={info.firstName}
-                    company={info.lastName}
-                    location={info.job}
+                    job={info.userName}
+                    company={info.title}
+                    location={info.phoneNumber}
                     id={info.id}
                   />
             

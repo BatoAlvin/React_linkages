@@ -5,6 +5,8 @@ import { createTheme, ThemeProvider } from "@material-ui/core";
 import OppCard from "../../components/JobOpportunities/Card";
 import styles from "../../styles/Opportunity.module.css";
 import { fetchAll } from "../../utils/fetch";
+import "./Jobs.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function Jobs() {
   const theme = createTheme({
@@ -36,6 +38,8 @@ function Jobs() {
     },
   });
 
+  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+
   const [todos, setTodos] = useState([]);
   const [search, setSearch] = useState("");
 
@@ -51,6 +55,7 @@ function Jobs() {
   return (
     <ThemeProvider theme={theme}>
       <div>
+      
         <Grid
           container
           spacing={0}
@@ -100,6 +105,14 @@ function Jobs() {
               ))}
           </Grid>
         </Grid>
+        {!isLoading && !user && (
+          <button onClick={() => loginWithRedirect()}>Login
+          </button>
+        )}
+
+        {!isLoading && user && <button onClick={() => logout()}>Logout
+        </button>
+        }
       </div>
     </ThemeProvider>
   );
